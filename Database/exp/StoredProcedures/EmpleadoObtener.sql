@@ -13,3 +13,4 @@ SET NOCOUNT ON
 	WHERE
 		(@IdEmpleado IS NULL OR IdEmpleado=@IdEmpleado)
 END
+GO
