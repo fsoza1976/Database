@@ -1,15 +1,15 @@
 ﻿CREATE PROCEDURE [dbo].[IdentificacionInsertar]
-	@Descripcion varchar(50)
+	@Identificacion varchar(50)
 AS BEGIN
 SET NOCOUNT ON
 	BEGIN TRANSACTION TRASA
 		BEGIN TRY
 
 		INSERT INTO dbo.TipoIdentificacion
-		(Descripcion
+		(Identificacion
 		)
 		VALUES
-		(@Descripcion
+		(@Identificacion
 		)
 		COMMIT TRANSACTION TRASA
 		SELECT 0 AS CodeError, '' AS MsgError

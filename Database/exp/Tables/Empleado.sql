@@ -7,6 +7,6 @@
 	, Edad INT NOT NULL
 	, FechaNacimiento DATETIME NOT NULL
     , TipoIdentificacion INT NOT NULL FOREIGN KEY REFERENCES exp.TipoIdentificacion([IdTipoIdentificacion])
-    , Identificacion INT NOT NULL
+    , Identificacion VARCHAR(50) NOT NULL
 )WITH (DATA_COMPRESSION = PAGE)
 GO

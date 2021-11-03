@@ -4,7 +4,7 @@ AS BEGIN
 SET NOCOUNT ON
 	SELECT
 		T.IdTipoIdentificacion,
-		T.Descripcion
+		T.Identificacion
 	FROM dbo.TipoIdentificacion T
 	WHERE
 		(@IdTipoIdentificacion IS NULL OR IdTipoIdentificacion=@IdTipoIdentificacion)

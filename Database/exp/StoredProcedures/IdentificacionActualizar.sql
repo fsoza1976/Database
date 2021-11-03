@@ -1,13 +1,13 @@
 ﻿CREATE PROCEDURE [dbo].[IdentificacionActualizar]
 	@IdTipoIdentificacion int,
-	@Descripcion varchar(50)
+	@Identificacion varchar(50)
 AS BEGIN
 SET NOCOUNT ON
 	BEGIN TRANSACTION TRASA
 		BEGIN TRY
 
 		UPDATE dbo.TipoIdentificacion SET
-			Descripcion=@Descripcion
+			Identificacion=@Identificacion
 		WHERE
 			IdTipoIdentificacion=@IdTipoIdentificacion
 
