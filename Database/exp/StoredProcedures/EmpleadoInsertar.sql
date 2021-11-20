@@ -3,7 +3,9 @@
 	@PrimerApellido varchar(50),
 	@SegundoApellido varchar(50),
 	@Edad int,
-	@FechaNacimiento datetime
+	@FechaNacimiento datetime,
+	@TipoIdentificacion int,
+	@Identificacion varchar(50)
 AS BEGIN
 SET NOCOUNT ON
 	BEGIN TRANSACTION TRASA
@@ -14,14 +16,18 @@ SET NOCOUNT ON
 		PrimerApellido,
 		SegundoApellido,
 		Edad,
-		FechaNacimiento
+		FechaNacimiento,
+		TipoIdentificacion,
+		Identificacion
 		)
 		VALUES
 		(@Nombre,
 		@PrimerApellido,
 		@SegundoApellido,
 		@Edad,
-		@FechaNacimiento
+		@FechaNacimiento,
+		@TipoIdentificacion,
+		@Identificacion
 		)
 		COMMIT TRANSACTION TRASA
 		SELECT 0 AS CodeError, '' AS MsgError

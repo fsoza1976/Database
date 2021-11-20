@@ -1,11 +1,11 @@
-﻿CREATE PROCEDURE [dbo].[IdentificacionEliminar]
+﻿CREATE PROCEDURE [exp].[IdentificacionEliminar]
 	@IdTipoIdentificacion int
 AS BEGIN
 SET NOCOUNT ON
 	BEGIN TRANSACTION TRASA
 		BEGIN TRY
 
-		DELETE FROM dbo.TipoIdentificacion WHERE IdTipoIdentificacion=@IdTipoIdentificacion
+		DELETE FROM exp.TipoIdentificacion WHERE IdTipoIdentificacion=@IdTipoIdentificacion
 
 		COMMIT TRANSACTION TRASA
 		SELECT 0 AS CodeError, '' AS MsgError

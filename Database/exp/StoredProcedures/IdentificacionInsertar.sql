@@ -1,11 +1,11 @@
-﻿CREATE PROCEDURE [dbo].[IdentificacionInsertar]
+﻿CREATE PROCEDURE [exp].[IdentificacionInsertar]
 	@Identificacion varchar(50)
 AS BEGIN
 SET NOCOUNT ON
 	BEGIN TRANSACTION TRASA
 		BEGIN TRY
 
-		INSERT INTO dbo.TipoIdentificacion
+		INSERT INTO exp.TipoIdentificacion
 		(Identificacion
 		)
 		VALUES
